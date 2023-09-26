@@ -1,0 +1,162 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #000718; 
+}
+body, input,textarea, a{
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+.form-wrap{
+    width:50%;
+    height: 600px;
+    padding:40px 25px 35px 25px;
+    border-radius: 30px;
+    background: #ecf0f3;
+    margin-left: 300px;;
+}
+.form-title{
+    text-align: left;
+    margin-left: 23px;
+    font-size: 28px;
+    letter-spacing: 0.5px;
+}
+.form-fields{
+    display: table;
+    width: 100%;
+    padding: 15px 5px 5px 5px;
+}
+.form-fields input,
+.form-fields textarea{
+    border: none;
+    outline:none;
+    background: none;
+    font-size: 18px;
+    color:#241d1d;
+    padding: 20px 10px 20px 5px;
+    width:100%
+}
+.form-fields textarea{
+    height: 150px;
+    resize: none;
+}
+.form-group{
+    width: 46%;
+    float: left;
+    padding: 0px 30px;
+    margin: 14px 12px;
+    border-radius: 25px;
+    box-shadow: inset 8px 8px 8px #c765c7, inset -8px -8px 8px #577adb;
+}
+.form-fields .form-group:last-child {
+    width: 96%;
+}
+.submit-button{
+    width: 96%;
+    height: 60px;
+    margin: 0px 12px;
+    border-radius: 30px;
+    font-size: 20px;;
+    font-weight: 700;
+    outline: none;
+    border:none;
+    cursor: pointer;
+    color:#fff;
+    text-align: center;
+    background: #71308f;
+    box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #ffffff;
+    transition: .5s;
+}
+.submit-button:hover{
+    background: #0e0c22;
+}
+/* Responsive css */
+@media only screen and (max-width: 767px) {
+
+    .form-wrap{
+        width: 100%; 
+        float: right;  
+         height: 100%;
+    }
+
+}
+
+/*---------------------------------image style--------------------------------*/
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.box::before {
+    content: ' ';
+    position: absolute;
+    inset: -10px 140px;
+    background: linear-gradient(31deg, #00ccff, #d400d4);
+    transition: 0.5s;
+    animation: animate 4s linear infinite;
+}
+
+.box:hover::before {
+    inset: -20px 0px;
+
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.box::after {
+    content: ' ';
+    position: absolute;
+    inset: 6px;
+    background: radial-gradient(circle, rgba(30,213,159,1) 0%, rgba(10,32,110,1) 84%);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.content {
+    position: absolute;
+    inset: 30px;
+    border: 6px solid #b564d4;
+    z-index: 3;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.content img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+@media screen and (max-width: 740px){
+      .box
+      {
+       width: 60%;
+       height: 300px;
+       border-radius: 60%;
+       margin-bottom: 50px;
+      }
+
+}
